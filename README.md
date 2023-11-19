@@ -1,4 +1,5 @@
 # friends-mastodon-like-interface
 Show the Friends status posts in a UI like Mastodon
 
-![friends-like-mastodon](https://github.com/akirk/friends-mastodon-like-interface/assets/203408/3de719f4-7876-4493-91bf-7be7beb3ebfb)
+<img width="1245" alt="friends-like-mastodon" src="https://github.com/akirk/friends-mastodon-like-interface/assets/203408/c17fb372-365c-4410-936b-5633a49685f6">
+
