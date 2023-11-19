@@ -1,11 +1,11 @@
-* {
+body.friends-like-mastodon * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 @font-face {
-	font-family: "FontAwesomeSubset";
+	font-family: "friends-mastodon";
 	src: url("fa-solid-900.woff2") format("woff2");
 }
 
@@ -23,38 +23,39 @@ body.friends-like-mastodon {
   font-weight: 400;
   line-height: 18px;
   text-rendering: optimizelegibility;
+  margin-top: 40px;
 }
 
-a {
+body.friends-like-mastodon a {
   background-color: rgba(0,0,0,0);
   -webkit-text-decoration-skip: objects;
 }
 
-a {
+body.friends-like-mastodon a {
 	outline: none;
   text-decoration: none;
 }
-a, ins, u {
+body.friends-like-mastodon a, body.friends-like-mastodon ins, body.friends-like-mastodon u {
   text-decoration-skip: ink edges;
 }
-.drawer, .ui {
+body.friends-like-mastodon .drawer, body.friends-like-mastodon .ui {
   display: flex;
   flex-direction: column;
 }
-.ui {
+body.friends-like-mastodon .ui {
   flex: 0 0 auto;
   height: 100%;
   width: 100%;
 }
 
-.columns-area__panels {
+body.friends-like-mastodon .columns-area__panels {
   display: flex;
   height: 100%;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
 }
-.columns-area__panels__pane {
+body.friends-like-mastodon .columns-area__panels__pane {
   display: flex;
   height: 100%;
   justify-content: flex-end;
@@ -62,14 +63,14 @@ a, ins, u {
   overflow: hidden;
   pointer-events: none;
 }
-.columns-area__panels__pane__inner {
+body.friends-like-mastodon .columns-area__panels__pane__inner {
   height: 100%;
   pointer-events: auto;
   position: fixed;
   width: 285px;
 }
 
-.search__input {
+body.friends-like-mastodon .search__input {
   background: #282c37;
   border: 0;
   border-radius: 4px;
@@ -87,7 +88,40 @@ a, ins, u {
   padding-inline-end: 30px;
   width: 100%;
 }
-.compose-panel {
+
+body.friends-like-mastodon .button {
+  background-color: #6364ff;
+  border: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 22px;
+  overflow: hidden;
+  padding: 7px 18px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+}
+
+body.friends-like-mastodon .button.button--block {
+  display: block;
+  width: 100%;
+}
+
+body.friends-like-mastodon .button:active, body.friends-like-mastodon .button:focus, body.friends-like-mastodon .button:hover {
+  background-color: #563acc;
+}
+
+body.friends-like-mastodon .compose-panel {
   display: flex;
   flex-direction: column;
   height: calc(100% - 10px);
@@ -96,14 +130,53 @@ a, ins, u {
   width: 285px;
 }
 
+body.friends-like-mastodon .compose-form textarea {
+  background: #fff;
+  border: 0;
+  box-sizing: border-box;
+  color: #282c37;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  resize: vertical;
+  width: 100%;
+}
+
+body.friends-like-mastodon .compose-form .compose-form__publish {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+body.friends-like-mastodon .compose-form .compose-form__publish .compose-form__publish-button-wrapper {
+  padding-top: 15px;
+}
+body.friends-like-mastodon .compose-form .compose-form__buttons-wrapper {
+  background: #ebebeb;
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+body.friends-like-mastodon .compose-form .compose-form__buttons-wrapper .character-counter__wrapper {
+  align-self: center;
+  margin-inline-end: 4px;
+}
+
 @media screen and (min-width: 1175px) {
-  .columns-area__panels__main {
+  body.friends-like-mastodon .columns-area__panels__main {
     max-width: 600px;
     padding: 0 10px;
   }
 }
 
-.columns-area__panels__main {
+body.friends-like-mastodon .columns-area__panels__main {
   box-sizing: border-box;
   display: flex;
   flex: 0 0 auto;
@@ -111,7 +184,7 @@ a, ins, u {
   width: 100%;
 }
 
-.tabs-bar__wrapper {
+body.friends-like-mastodon .tabs-bar__wrapper {
 	background: #17191f;
 	padding-top: 0;
 	position: sticky;
@@ -120,18 +193,18 @@ a, ins, u {
 }
 
 @media screen and (min-width: 1175px) {
-	.tabs-bar__wrapper {
+	body.friends-like-mastodon .tabs-bar__wrapper {
 		padding-top: 10px;
 		top: 0;
 	}
 }
 
 @media screen and (width >= 631px) {
-  .columns-area {
+  body.friends-like-mastodon .columns-area {
     padding: 0;
   }
 }
-.columns-area {
+body.friends-like-mastodon .columns-area {
   display: flex;
   flex: 1 1 auto;
   flex-direction: row;
@@ -142,42 +215,42 @@ a, ins, u {
 
 
 @media screen and (min-width: 1175px) {
-  .columns-area--mobile {
+  body.friends-like-mastodon .columns-area--mobile {
     padding: 0 0 10px;
   }
 }
-.columns-area--mobile {
+body.friends-like-mastodon .columns-area--mobile {
   flex-direction: column;
   height: 100%;
   margin: 0 auto;
   width: 100%;
 }
 
-@supports (display:grid) {
-  .columns-area--mobile .scrollable {
+body.friends-like-mastodon @supports (display:grid) {
+  body.friends-like-mastodon .columns-area--mobile .scrollable {
     contain: content;
   }
 }
-.columns-area--mobile .scrollable {
+body.friends-like-mastodon .columns-area--mobile .scrollable {
   overflow: visible;
 }
-.column > .scrollable {
+body.friends-like-mastodon .column > .scrollable {
   background: #282c37;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-@supports (display:grid) {
-  .scrollable {
+body.friends-like-mastodon @supports (display:grid) {
+  body.friends-like-mastodon .scrollable {
     contain: strict;
   }
 }
-.scrollable {
+body.friends-like-mastodon .scrollable {
   -webkit-overflow-scrolling: touch;
   flex: 1 1 auto;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-.status {
+body.friends-like-mastodon .status {
   animation: fade .15s linear;
   border-bottom: 1px solid #393f4f;
   cursor: auto;
@@ -186,7 +259,7 @@ a, ins, u {
   padding: 16px;
 }
 
-.status__info {
+body.friends-like-mastodon .status__info {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -197,7 +270,7 @@ a, ins, u {
 }
 
 
-.status__relative-time {
+body.friends-like-mastodon .status__relative-time {
   color: #606984;
   display: block;
   flex: 0 0 auto;
@@ -207,10 +280,10 @@ a, ins, u {
   order: 2;
 }
 
-.status__display-name {
+body.friends-like-mastodon .status__display-name {
   color: #606984;
 }
-.status__info .status__display-name {
+body.friends-like-mastodon .status__info .status__display-name {
   align-items: center;
   display: flex;
   font-size: 15px;
@@ -220,29 +293,29 @@ a, ins, u {
   overflow: hidden;
 }
 
-.status__info .status__display-name .display-name bdi {
+body.friends-like-mastodon .status__info .status__display-name .display-name bdi {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.status__display-name .display-name strong {
+body.friends-like-mastodon .status__display-name .display-name strong {
   color: #fff;
 }
-.status__info .status__display-name .display-name__account {
+body.friends-like-mastodon .status__info .status__display-name .display-name__account {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.account__display-name, .detailed-status__application, .detailed-status__datetime, .detailed-status__display-name, .status__display-name, .status__relative-time {
+body.friends-like-mastodon .account__display-name, body.friends-like-mastodon .detailed-status__application, body.friends-like-mastodon .detailed-status__datetime, body.friends-like-mastodon .detailed-status__display-name, body.friends-like-mastodon .status__display-name, body.friends-like-mastodon .status__relative-time {
   text-decoration: none;
 }
 
-.status__avatar {
+body.friends-like-mastodon .status__avatar {
   height: 46px;
   width: 46px;
 }
 
-.account__avatar {
+body.friends-like-mastodon .account__avatar {
   background: transparent no-repeat;
     background-position-x: 0%;
     background-position-y: 0%;
@@ -255,19 +328,19 @@ a, ins, u {
   position: relative;
 }
 
-a .account__avatar {
+body.friends-like-mastodon a .account__avatar {
   cursor: pointer;
 }
 
 
-.account__avatar img {
+body.friends-like-mastodon .account__avatar img {
   display: block;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
 }
-.status__action-bar {
+body.friends-like-mastodon .status__action-bar {
   align-items: center;
   display: flex;
   gap: 18px;
@@ -275,12 +348,12 @@ a .account__avatar {
   margin-top: 16px;
 }
 
-.status__action-bar button {
+body.friends-like-mastodon .status__action-bar button {
   font-size: 18px;
 }
 
 
-.icon-button {
+body.friends-like-mastodon .icon-button {
   background: transparent;
   border: 0;
   border-radius: 4px;
@@ -291,14 +364,14 @@ a .account__avatar {
   text-decoration: none;
 }
 
-.icon-button--with-counter {
+body.friends-like-mastodon .icon-button--with-counter {
   align-items: center;
   display: inline-flex;
   padding: 0 4px 0 2px;
   width: auto !important;
 }
 
-.icon-button__counter {
+body.friends-like-mastodon .icon-button__counter {
   display: inline-block;
   font-size: 12px;
   font-weight: 500;
@@ -306,38 +379,38 @@ a .account__avatar {
   width: auto;
 }
 
-.actions button:hover {
+body.friends-like-mastodon .actions button:hover {
 	background-color: rgba(96,105,132,.15);
   color: #707b97;
 }
 
-i.fa::before {
-	font-family: "FontAwesomeSubset";
+body.friends-like-mastodon i.fa::before {
+	font-family: "friends-mastodon";
 	font-style: normal;
 }
 
-i.fa-reply::before {
+body.friends-like-mastodon i.fa-reply::before {
 	content: "\f3e5";
 }
 
-i.fa-retweet::before {
+body.friends-like-mastodon i.fa-retweet::before {
 	content: "\f079";
 }
 
-i.fa-star::before {
+body.friends-like-mastodon i.fa-star::before {
 	content: "\f005";
 }
 
-i.fa-bookmark::before {
+body.friends-like-mastodon i.fa-bookmark::before {
 	content: "\f02e";
 }
 
-i.fa-ellipsis-h::before {
+body.friends-like-mastodon i.fa-ellipsis-h::before {
 	content: "\f141";
 }
 
 
-.reply-indicator__content, .status__content {
+body.friends-like-mastodon .reply-indicator__content, body.friends-like-mastodon .status__content {
   word-wrap: break-word;
   color: #fff;
   font-size: 15px;
@@ -348,13 +421,27 @@ i.fa-ellipsis-h::before {
   position: relative;
   text-overflow: ellipsis;
 }
-.status__content {
+body.friends-like-mastodon .status__content {
   clear: both;
 }
-.status__content a:any-link {
+body.friends-like-mastodon .status__content a:any-link {
     color: #8c8dff;
 
 }
-.status__content--with-action {
+body.friends-like-mastodon .status__content--with-action {
   cursor: pointer;
+}
+
+body.friends-like-mastodon .friends-brand {
+  margin-top: 2em;
+  text-align: left;
+}
+body.friends-like-mastodon .friends-brand h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+body.friends-like-mastodon .friends-brand a, body.friends-like-mastodon .friends-brand a:visited {
+  color: #2e5bec;
 }

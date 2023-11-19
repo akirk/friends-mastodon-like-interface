@@ -19,6 +19,10 @@ defined( 'ABSPATH' ) || exit;
 define( 'FRIENDS_MASTODON_INTERFACE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 add_action( 'wp_enqueue_scripts', function() {
+	global $wp_query;
+	if ( ! isset( $wp_query ) || 'friends/type/status' !== substr( $wp_query->query['pagename'], 0, 19 ) ) {
+		return $file_paths;
+	}
 	$handle = 'friends-mastodon-like-interface';
 	$file = 'style.css';
 	$version = Friends::VERSION;
@@ -26,6 +30,10 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_filter( 'friends_template_paths', function( $file_paths ) {
+	global $wp_query;
+	if ( ! isset( $wp_query ) || 'friends/type/status' !== substr( $wp_query->query['pagename'], 0, 19 ) ) {
+		return $file_paths;
+	}
 	$file_paths[ 15 ] = FRIENDS_MASTODON_INTERFACE_PLUGIN_DIR . 'templates';
 	return $file_paths;
 } );

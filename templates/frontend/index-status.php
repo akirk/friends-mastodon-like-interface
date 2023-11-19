@@ -18,7 +18,10 @@
 							</div>
 
 							<form class="compose-form">
+								<textarea name="" id="" cols="30" rows="10" placeholder="<?php esc_attr_e( "What's on your mind?", 'friends' ); ?>"></textarea>
 
+
+								<div class="compose-form__publish"><div class="compose-form__publish-button-wrapper"><button class="button button--block" type="submit"><?php esc_html_e( 'Publish!', 'friends' ); ?></button></div></div>
 							</form>
 						</div>
 					</div>
@@ -39,11 +42,12 @@
 				</div>
 			</div>
 			<div class="columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational">
+				<div class="friends-brand">
+					<a class="friends-logo" href="<?php echo esc_url( home_url( 'friends' ) ); ?>"><h2><?php esc_html_e( 'Friends', 'friends' ); ?></h2></a>
+				</div>
 
-			</div>
 		</div>
 	</div>
 </div>
 
-</body>
-</html>
+<?php wp_footer(); ?>
