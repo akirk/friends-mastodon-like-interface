@@ -28,6 +28,7 @@ $author_name = $args['friend_user']->display_name;
  * ```
  */
 $override_author_name = apply_filters( 'friends_override_author_name', '', $author_name, get_the_id() );
+$avatar = apply_filters( 'friends_author_avatar_url', $avatar, $friend_user, get_the_id() );
 ?><div class="status__info">
 	<a href="<?php echo esc_url( get_the_permalink() ); ?>" class="status__relative-time" target="_blank" rel="noopener noreferrer">
 		<time datetime="<?php echo esc_attr( date( 'r', get_post_time( 'U', true ) ) ); ?>" title="<?php echo esc_attr( get_post_time() ); ?>"><?php echo esc_html( human_time_diff( get_post_time( 'U', true ) ) ); ?></time>
@@ -36,7 +37,7 @@ $override_author_name = apply_filters( 'friends_override_author_name', '', $auth
 	<a href="<?php echo esc_attr( $friend_user->get_local_friends_page_url() . get_the_ID() . '/' ); ?>" title="<?php echo esc_html( $friend_user->display_name ); ?>" class="status__display-name" target="_blank" rel="noopener noreferrer">
 		<div class="status__avatar">
 			<div class="account__avatar" style="width: 46px; height: 46px;">
-				<?php if ( in_array( get_post_type(), apply_filters( 'friends_frontend_post_types', array() ), true ) ) : ?>
+				<?php if ( ! $avatar && in_array( get_post_type(), apply_filters( 'friends_frontend_post_types', array() ), true ) ) : ?>
 					<?php echo get_avatar( $args['friend_user']->user_login, 46 ); ?>
 				<?php else : ?>
 					<img src="<?php echo esc_url( $avatar ? $avatar : get_avatar_url( get_the_author_meta( 'ID' ) ) ); ?>" width="46" height="46" class="avatar" />

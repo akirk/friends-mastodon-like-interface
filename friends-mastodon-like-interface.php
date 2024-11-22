@@ -3,7 +3,7 @@
  * Plugin name: Friends Mastodon-like Interface
  * Plugin author: Alex Kirk
  * Plugin URI: https://github.com/akirk/friends-mastodon-like-interface
- * Version: 0.1
+ * Version: 0.2
  *
  * Description: Show the Friends status posts in a UI like Mastodon.
  *
